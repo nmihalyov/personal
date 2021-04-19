@@ -1,0 +1,62 @@
+include ../_ui/heading/heading
+
+mixin skills
+  section.skills.container
+    .wrapper
+      +heading('Skills')
+      .skills__row
+        .skills__col
+          .skills__icon(data-icon="markup")
+          p.skills__heading Markup
+          ul.skills__list
+            li.skills__list-item HTML5
+            li.skills__list-item Pug
+            li.skills__list-item JSX
+        .skills__col
+          .skills__icon(data-icon="styles")
+          p.skills__heading Style
+          ul.skills__list
+            li.skills__list-item CSS3
+            li.skills__list-item Less
+            li.skills__list-item Sass/Scss
+            li.skills__list-item CSS Modules
+        .skills__col
+          .skills__icon(data-icon="scripts")
+          p.skills__heading Scripts/Frameworks
+          ul.skills__list
+            li.skills__list-item JavaScript (ES6)
+            li.skills__list-item React
+            li.skills__list-item React Native
+            li.skills__list-item Vue
+        .skills__col
+          .skills__icon(data-icon="pm")
+          p.skills__heading Package Managers
+          ul.skills__list
+            li.skills__list-item NPM
+            li.skills__list-item Yarn
+        .skills__col
+          .skills__icon(data-icon="build")
+          p.skills__heading Project Builders
+          ul.skills__list
+            li.skills__list-item Gulp
+            li.skills__list-item Webpack
+        .skills__col
+          .skills__icon(data-icon="db")
+          p.skills__heading Databases
+          ul.skills__list
+            li.skills__list-item MySQL (SQL)
+            li.skills__list-item Firebase
+        .skills__col
+          .skills__icon(data-icon="tasks")
+          p.skills__heading Task Tracking
+          ul.skills__list
+            li.skills__list-item Trello
+            li.skills__list-item Worksection
+            li.skills__list-item YouTrack
+        .skills__col
+          .skills__icon(data-icon="other")
+          p.skills__heading Other
+          ul.skills__list
+            li.skills__list-item Git
+            li.skills__list-item BEM
+            li.skills__list-item Figma, Photoshop

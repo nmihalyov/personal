@@ -1,0 +1,64 @@
+.contacts
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    padding: $gutter/2 0 $gutter
+  &__block
+    width: 320px
+    margin-right: -70px
+  &__item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    padding: 10px 0
+    text-decoration: none
+    &:not(:last-child)
+      margin-bottom: 30px
+    &:hover
+      .contacts__text
+          background-size: 0 100%
+  &__icon
+    padding-top: 5px
+    margin: 0 20px 0 0
+    transform: translateY(-3px)
+  &__text
+    color: transparent
+    transition: all .5s ease
+    animation: link .5s linear infinite
+    background:
+      image: linear-gradient($black, $black)
+      clip: text
+      size: 100% 100%
+      position: 100%
+      repeat: no-repeat
+    font:
+      size: 20px
+      weight: 700
+
+@keyframes link
+  0%
+    background-color: $red
+  100%
+    background-color: $red
+
+@media screen and (max-width: $mobile)
+  .contacts
+    &__wrapper
+      padding: $gutter/3 0 $gutter/2
+    &__block
+      width: 260px
+      margin: 0 auto
+    &__item
+      padding: 5px 0
+      &:not(:last-child)
+        margin-bottom: 15px
+    &__icon
+      width: 25px
+      svg
+        width: 100%
+        height: auto
+    &__text
+      font-size: 16px

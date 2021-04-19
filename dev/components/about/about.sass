@@ -1,0 +1,28 @@
+.about
+  &__photo
+    width: 250px
+    height: 286px
+    margin: 0 auto $gutter/2  auto
+    &-img
+      width: 100%
+  &__text
+    max-width: $mobile
+    width: 100%
+    margin: 0 auto
+    padding: 0 45px
+    text-align: center
+    font:
+      size: 24px
+      weight: 100
+    p:not(:last-child)
+      margin: 0 0 1em 
+
+@media only screen and (max-width: $mobile)
+  .about
+    &__photo
+      width: 175px
+      height: 175px
+      margin: 0 auto $gutter/2 auto
+    &__text
+      padding: 0
+      font-size: 18px

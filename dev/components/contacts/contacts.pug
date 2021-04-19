@@ -1,0 +1,22 @@
+mixin contacts
+  section.contacts.container
+    .wrapper
+      +heading('Contacts')
+      .contacts__wrapper
+        .contacts__block
+          a.contacts__item(href="//vk.com/nmihalyov", target="_blank", rel="noopener")
+            .contacts__icon
+              include assets/vk.svg
+            span.contacts__text vk.com/nmihalyov
+          a.contacts__item(href="//t.me/nmihalyov", target="_blank", rel="noopener")
+            .contacts__icon
+              include assets/telegram.svg
+            span.contacts__text @nmihalyov
+          a.contacts__item(href="mailto:nikita.mihalyov@gmail.com", target="_blank", rel="noopener")
+            .contacts__icon
+              include assets/email.svg
+            span.contacts__text nikita.mihalyov@gmail.com
+          a.contacts__item(href="//github.com/nmihalyov", target="_blank", rel="noopener")
+            .contacts__icon
+              include assets/github.svg
+            span.contacts__text github.com/nmihalyov

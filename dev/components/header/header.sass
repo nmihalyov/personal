@@ -1,0 +1,129 @@
+.header
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 15px 0
+  background-color: #fff
+  border-bottom: 1px solid transparentize($black, .8)
+  &-mobile
+    display: none
+  &__wrapper
+    z-index: 2
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__name
+    line-height: 1
+    font:
+      size: 22px
+      weight: 700
+  &__nav
+    position: relative
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    &-mobile
+      display: none
+  &__link
+    display: inline-block
+    padding: 0 5px
+    margin-left: 20px
+    text-decoration: none
+    transition: all .3s ease-in-out
+    &:hover
+      background-color: $black
+      color: #fff
+  &__burger
+    display: none
+
+@media screen and (max-width: $tablet)
+  .header
+    &__name
+      font-size: 28px
+    &__link
+      display: block
+      margin-left: 0
+      &:hover
+        background-color: transparent
+        color: $black
+        transform: none
+    &__nav
+      display: none
+    &__burger
+      position: relative
+      display: block
+      width: 40px
+      height: 30px
+      span
+        position: absolute
+        left: 0
+        display: block
+        width: 100%
+        height: 4px
+        background-color: $black
+        transform-origin: left
+        transition: all .3s ease
+        &:first-child
+          top: 0
+        &:nth-child(2)
+          top: calc(50% - 2px)
+        &:last-child
+          bottom: 0
+      &--active
+        span
+          &:first-child
+            top: -2px
+            transform: rotate(45deg)
+          &:nth-child(2)
+            opacity: 0
+          &:last-child
+            bottom: -1px
+            transform: rotate(-45deg)
+    &-mobile
+      z-index: 1
+      position: fixed
+      top: 0
+      left: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 100%
+      background-color: #fff
+      transform: translateY(-100%)
+      transition: all .5s ease
+      &--active
+        transform: translateY(0)
+        .header-mobile__item
+          opacity: 1
+          transform: translateY(0)
+      &__item
+        opacity: 0
+        margin-bottom: 15px
+        text-align: center
+        transform: translateY(-200%)
+        font-size: 30px
+        &:first-child
+          transition: all .5s ease .35s
+        &:nth-child(2)
+          transition: all .5s ease .3s
+        &:nth-child(3)
+          transition: all .5s ease .25s
+        &:nth-child(4)
+          transition: all .5s ease .2s
+
+@media screen and (max-width: $mobile)
+  .header
+    padding: 10px 0
+    &__name
+      font-size: 18px
+    &__burger
+      transform-origin: right
+      transform: scale(0.6)
+    &-mobile
+      &__item
+        font-size: 22px

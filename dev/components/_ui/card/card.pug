@@ -1,0 +1,10 @@
+include ../button/button
+
+mixin card(title, desc, { github, demo })
+  .card
+    p.card__title!= title
+    p.card__desc= desc
+    .card__buttons
+      if demo
+        +button('primary', 'link', '<span class="card__btn-icon card__btn-icon--demo"></span> Open demo', 'card__btn', {link: demo})
+      +button('secondary', 'link', '<span class="card__btn-icon card__btn-icon--github"></span> View on GitHub', 'card__btn', {link: github})
