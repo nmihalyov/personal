@@ -1,0 +1,18 @@
+extends ../layouts/main
+
+include /components/hero/hero
+include /components/about/about
+include /components/skills/skills
+include /components/demos/demos
+include /components/contacts/contacts
+
+block variables
+  - const title = 'Software Engineer'
+  - const description = 'Page description'
+
+block content
+  +hero
+  +about
+  +skills
+  +demos
+  +contacts

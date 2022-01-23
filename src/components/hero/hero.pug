@@ -1,0 +1,11 @@
+include ../_ui/button/button
+
+mixin hero
+  section.hero.container
+    .hero__wrapper.wrapper
+      h1.hero__heading 
+        span Hello!
+        br
+        span I am JavaScript software engineer
+      +button('primary', 'link', 'Donwload CV', 'hero__button', {link: require('@/assets/nikita_mihalyov_cv.pdf'), icon: 'download', download: true})
+      .hero__arrow

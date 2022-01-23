@@ -1,0 +1,27 @@
+// libraries
+@import './libs';
+
+// utils
+@import './utils/vars';
+@import './utils/mixins';
+@import './utils/fonts';
+@import './utils/base';
+
+// UI components
+@import '@/components/_ui/heading/heading';
+@import '@/components/_ui/button/button';
+@import '@/components/_ui/input/input';
+@import '@/components/_ui/checkbox/checkbox';
+@import '@/components/_ui/radio/radio';
+@import '@/components/_ui/popup/popup';
+@import '@/components/_ui/card/card';
+
+// components
+@import '@/components/preloader/preloader';
+@import '@/components/header/header';
+@import '@/components/hero/hero';
+@import '@/components/about/about';
+@import '@/components/skills/skills';
+@import '@/components/demos/demos';
+@import '@/components/contacts/contacts';
+@import '@/components/footer/footer';

@@ -1,0 +1,17 @@
+include ../_ui/button/button
+
+mixin contacts
+  section.contacts.container
+    .wrapper
+      +heading('Contacts')
+      .contacts__wrapper
+        .contacts__block
+          a.contacts__item(href="//t.me/nmihalyov", target="_blank", rel="noopener", data-icon="telegram")
+            span.contacts__text @nmihalyov
+          a.contacts__item(href="//linkedin.com/in/nmihalyov", target="_blank", rel="noopener", data-icon="linkedin")
+            span.contacts__text linkedin.com/in/nmihalyov
+          a.contacts__item(href="//github.com/nmihalyov", target="_blank", rel="noopener", data-icon="github")
+            span.contacts__text github.com/nmihalyov
+          a.contacts__item(href="mailto:nikita.mihalyov@gmail.com", target="_blank", rel="noopener", data-icon="email")
+            span.contacts__text nikita.mihalyov@gmail.com
+        +button('primary', 'link', 'Donwload CV', 'hero__button', {link: require('@/assets/nikita_mihalyov_cv.pdf'), icon: 'download', download: true})

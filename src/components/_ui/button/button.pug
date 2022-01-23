@@ -1,0 +1,24 @@
+mixin button(style, type, text, className, options)
+  - classNameString = `button button--${style}`
+  - isDisabled = options && options.disabled
+
+  if className
+    - classNameString += ' ' + className
+
+  if isDisabled
+    - classNameString += ' button--disabled'
+
+  if options && options.small
+    - classNameString += ' button--small'
+
+  if type === 'link'
+    a(class=classNameString, target="_blank", rel="noopener noreferrer", href=options.link, disabled=isDisabled, download=options.download)
+      if options.icon
+        span.button__icon(data-icon=options.icon)
+      =text
+  else if type === 'button'
+    button(class=classNameString, disabled=isDisabled)= text
+  else if type === 'popup'
+    button.js-open-popup(class=classNameString, data-popup=options.popup, disabled=isDisabled)= text
+  else if type === 'submit'
+    button(type="submit", class=classNameString, disabled=isDisabled)= text

@@ -1,0 +1,102 @@
+.contacts {
+  &__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: $gutter/2 0 $gutter;
+  }
+  &__block {
+    width: 320px;
+    margin-right: -50px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0 10px 50px;
+    text-decoration: none;
+    background: {
+      size: 30px;
+      position: 0 10px;
+      repeat: no-repeat;
+    }
+    &[data-icon="telegram"] {
+      background-image: url('@/assets/images/icons/telegram.svg');
+    }
+    &[data-icon="github"] {
+      background-image: url('@/assets/images/icons/github.svg');
+    }
+    &[data-icon="linkedin"] {
+      background-position: 0 7px;
+      background-image: url('@/assets/images/icons/linkedin.svg');
+    }
+    &[data-icon="email"] {
+      background-position: 0 13px;
+      background-image: url('@/assets/images/icons/email.svg');
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &:hover {
+      .contacts__text {
+        background-size: 0 100%;
+      }
+    }
+  }
+  &__icon {
+    padding-top: 5px;
+    margin: 0 20px 0 0;
+    transform: translateY(-3px);
+  }
+  &__text {
+    color: transparent;
+    transition: all .5s ease;
+    animation: link .5s linear infinite;
+    background: {
+      image: linear-gradient($black, $black);
+      clip: text;
+      size: 100% 100%;
+      position: 100%;
+      repeat: no-repeat;
+    }
+    font: {
+      size: 20px;
+      weight: 700;
+    }
+  }
+}
+
+@keyframes link {
+  0% {
+    background-color: $red;
+  }
+  100% {
+    background-color: $red;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .contacts {
+    &__wrapper {
+      padding: $gutter/3 0 $gutter/2;
+    }
+    &__block {
+      width: 260px;
+      margin: 0 auto;
+    }
+    &__item {
+      padding: 5px 0 5px 45px;
+      background-position: 0px !important;
+      background-size: 25px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

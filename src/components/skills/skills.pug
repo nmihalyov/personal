@@ -1,0 +1,66 @@
+include ../_ui/heading/heading
+
+mixin skills
+  section.skills.container
+    .wrapper
+      +heading('Skills')
+      .skills__row
+        .skills__col
+          .skills__icon(data-icon="markup")
+          p.skills__heading Markup
+          ul.skills__list
+            li.skills__list-item HTML5
+            li.skills__list-item Pug (Jade)
+            li.skills__list-item JSX
+        .skills__col
+          .skills__icon(data-icon="styles")
+          p.skills__heading Styles
+          ul.skills__list
+            li.skills__list-item CSS3
+            li.skills__list-item Less
+            li.skills__list-item Sass/Scss
+            li.skills__list-item CSS Modules
+        .skills__col
+          .skills__icon(data-icon="scripts")
+          p.skills__heading Scripts/Frameworks
+          ul.skills__list
+            li.skills__list-item JavaScript (ES6+)
+            li.skills__list-item TypeScript
+            li.skills__list-item React
+            li.skills__list-item React Native
+            li.skills__list-item Vue
+        .skills__col
+          .skills__icon(data-icon="test")
+          p.skills__heading Testing
+          ul.skills__list
+            li.skills__list-item Jest
+            li.skills__list-item Enzyme
+            li.skills__list-item React Testing Library
+        .skills__col
+          .skills__icon(data-icon="tools")
+          p.skills__heading Tools
+          ul.skills__list
+            li.skills__list-item NPM, Yarn
+            li.skills__list-item Git (GitHub/GitLab)
+            li.skills__list-item Figma/Photoshop
+        .skills__col
+          .skills__icon(data-icon="build")
+          p.skills__heading Project builders
+          ul.skills__list
+            li.skills__list-item Webpack
+            li.skills__list-item Gulp
+        .skills__col
+          .skills__icon(data-icon="tasks")
+          p.skills__heading Task trackers
+          ul.skills__list
+            li.skills__list-item Jira
+            li.skills__list-item YouTrack
+            li.skills__list-item Trello
+            li.skills__list-item Worksection
+        .skills__col
+          .skills__icon(data-icon="other")
+          p.skills__heading Other
+          ul.skills__list
+            li.skills__list-item Storybook
+            li.skills__list-item BEM
+            li.skills__list-item Agile (Scrum/Kanban)

@@ -1,0 +1,108 @@
+.hero {
+  height: 100vh;
+  margin-bottom: $gutter/2;
+  padding: 0;
+  background: {
+    image: url('@/assets/images/static/hero.jpeg');
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  &__heading {
+    margin: 0;
+    font: {
+      size: 38px;
+      weight: 700;
+    }
+    span {
+      display: inline-block;
+      padding: 2px 5px;
+      background-color: #fff;
+      color: $black;
+      &:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__button {
+    margin-top: 35px;
+  }
+  &__arrow {
+    position: absolute;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 20px);
+    animation: {
+      duration: 5s;
+      name: arrow-bounce;
+      timing-function: ease-in-out;
+      delay: 2s;
+      iteration-count: infinite;
+    }
+    background: {
+      image: url('@/assets/images/icons/arrow.svg');
+      size: contain;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  7.5% {
+    transform: translateY(-15px);
+  }
+  15% {
+    transform: translateY(5px);
+  }
+  22.5% {
+    transform: translateY(-3px);
+  }
+  30%,
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero {
+    background-position: 65% 50%;
+    &__heading {
+      width: 380px;
+      font-size: 42px;
+    }
+    &__button {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .hero {
+    &__heading {
+      width: 205px !important;
+      font-size: 22px !important;
+    }
+    &__button {
+      margin-top: 25px !important;
+    }
+    &__arrow {
+      left: calc(50% - 15px);
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+include ../_ui/heading/heading
+include ../_ui/card/card
+
+mixin demos
+  section.demos.container
+    .wrapper
+      +heading('Demos')
+      p.demos__desc Several demonstration projects & development tools made by me.
+      .demos__grid
+        +card('Next CRM', 'Simple UI built with AntDesign. Stack: React/Redux, Next, TypeScript, SCSS Modules. Tested with Jest + Enzyme.', {github: 'https://github.com/nmihalyov/next-crm', demo: '#'})
+        +card('Vue CRM', 'CRM system made with Vue.js framework. Complex UI and interactivity, integration with Firebase API.', {github: 'https://github.com/nmihalyov/vue-crm', demo: '#'})
+        +card('Canvas Chart', 'Pure JavaScript customizable line chart using canvas with some user-friendly features.', {github: 'https://github.com/nmihalyov/canvas-chart', demo: 'canvas-chart'})
+        +card('Pure Start', 'Webpack boilerplate to build simple projects fast. A lot of useful features and ready-to-use components. Over 80 stars on GitHub.', {github: 'https://github.com/nmihalyov/pure-start', demo: 'pure-start'})
+        +card('Prime Grid', 'Flexible, simple and clean grid library for page layout with a lot of settings. Over 20 stars on GitHub.', {github: 'https://github.com/nmihalyov/prime-grid', demo: 'prime-grid'})
+        +card('Decliner', 'Small library to decline russian words by numbers. 40 stars on GitHub.', {github: 'https://github.com/nmihalyov/decliner'})

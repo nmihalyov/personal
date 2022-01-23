@@ -1,0 +1,30 @@
+.heading {
+  position: relative;
+  margin: 0 0 $gutter/2 0;
+  text-align: center;
+  font: {
+    size: 36px;
+    weight: 900;
+  }
+  &__underline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -7px;
+    width: 120px;
+    height: 5px;
+    background-color: $black;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .heading {
+    margin: 0 0 $gutter/3 0;
+    font-size: 28px;
+    &__underline {
+      bottom: -5px;
+      width: 90px;
+      height: 3px;
+    }
+  }
+}
